@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<header class="masthead" style="background-image: url('{{post.picurl}}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{post.title}}</h1>
+          <h2 class="subheading">{{post.subtitle}}</h2>
+          <span class="meta">{{ post.date_time |date:"Y /m /d"}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content -->
+<article>
+    <div class="container">
+		<div class="row">
+	    	<div class="col-lg-8 col-md-10 mx-auto">
+				{{post.content}}
+	  		</div>
+	  </div>
+    </div>
+</article>
+
+{% endblock %}
